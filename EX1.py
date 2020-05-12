@@ -1,10 +1,16 @@
 def modulo(x, y) :
 
-   if y==0 :
+   if x/y == (1 or 0) :
+
        return x
    else :
-       x*=x
-       return y*modulo(x,y)
+       if x<y :
+           y = y//x
+           return modulo(x,y)
+       else :
+           x = x//y
+           return modulo(x,y)
+
 
 
 
